@@ -1,0 +1,138 @@
+:root {
+    --bg-color: #431e6a;
+    --primary-color: #857df0;
+    --secondary-color: #fff;
+    --glass-color: rgba(255, 255, 255, 0.1);
+    --glass-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    --glass-border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--secondary-color);
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 2200px;
+    max-height: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: var(--glass-color);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: var(--glass-shadow);
+    border: var(--glass-border);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .input-group{
+    margin-bottom: 70px;
+    gap: 4%;
+    display: flex;
+    margin-left: 14%;
+  }
+  .filter-group{
+    display: flex;
+    margin-bottom: 70px;
+    margin-left:30% ;
+    gap: 30px;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  input[type="date"] {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid;
+    border-color: #fff;
+    font-size: 16px;
+    margin-right: 10px;
+    color:rgb(246, 231, 231);
+    background-color: transparent;
+  }
+  
+  button {
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #7b76bf;
+  }
+  
+  .expense-list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  
+  .expense-item {
+    background-color: var(--glass-color);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 10px;
+    box-shadow: var(--glass-shadow);
+    border: var(--glass-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .expense-item button {
+    background-color: #f2eff6;
+  }
+  .expense-item button:hover {
+    background-color: #e88b8b;
+  }
+  
+  .total-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .total-container p {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+  
+  .total-container span {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 600px) {
+    .container {
+      padding: 10px;
+    }
+  
+    .input-group,
+    .filter-group {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    input[type="text"],
+    input[type="number"],
+    input[type="date"] {
+      margin-right: 0;
+      margin-bottom: 10px;
+      width: 100%;
+    }
+  
+    button {
+      width: 100%;
+    }
+  }
